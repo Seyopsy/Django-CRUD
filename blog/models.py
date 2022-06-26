@@ -6,7 +6,7 @@ from django.template.defaultfilters import slugify
 # Create your models here.
 
 
-class (models.Model):
+class Post(models.Model):
 
     STATUS_CHOICES = (
         ("draft", "Draft"),
