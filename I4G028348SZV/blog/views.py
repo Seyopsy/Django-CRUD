@@ -7,15 +7,14 @@ from blog.models import Post
 # Create your views here.
 class PostListView(ListView):
     model=Post
-    template = "blog/post_list.html"
+    template = "./blog/post_form.html"
+
     
 class PostCreateView(CreateView):
     model=Post
     fields="__all__"
-    template = "./blog/post_form.html"
-    # I4G028348SZV
-    # I4G028348SZV\blog\templates\blog\post_form.html
-    success_url=reverse_lazy("blog:all")
+    success_url=reverse_lazy('blog:all')
+    template = "./blog/post_detail.html"
 
 class PostDetailView(DetailView):
     model=Post
